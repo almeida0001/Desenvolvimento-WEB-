@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Lista de Tarefas</h2>
+
+<a href="/tarefas/cadastrar">Nova tarefa</a>
+
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Título</th>
+    <th>Data</th>
+</tr>
+
+<tr th:each="t : ${tarefas}">
+    <td th:text="${t.id}"></td>
+    <td th:text="${t.titulo}"></td>
+    <td th:text="${t.data}"></td>
+</tr>
+
+</table>
+
+</body>
+</html>
